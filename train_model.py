@@ -3,8 +3,8 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import json
 
 # Paths to training and validation directories
-train_dir = "dataset/train"
-val_dir = "dataset/validation"
+train_dir = "C:/Users/daber/OneDrive/Documents/ITSNEEDS/PCV/CardTing/dataset/train"
+val_dir = "C:/Users/daber/OneDrive/Documents/ITSNEEDS/PCV/CardTing/dataset/valid"
 
 # Image data generators for data loading and augmentation
 train_datagen = ImageDataGenerator(rescale=1.0/255, rotation_range=10,
@@ -54,6 +54,4 @@ history = model.fit(
 model.save("poker_card_classifier.h5")
 print("Model saved as poker_card_classifier.h5")
 
-# Save class indices to a JSON file
-with open("class_indices.json", "w") as json_file:
-    json.dump(train_generator.class_indices, json_file)
+# Save class indices to a JSON
